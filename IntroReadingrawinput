@@ -1,0 +1,8 @@
+#def read():
+#   s = str(input())
+#   print s
+	
+#read()
+
+s = raw_input()
+print s
