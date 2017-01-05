@@ -1,0 +1,14 @@
+n = input()
+new_list = raw_input().split()
+new_list[0] = int(new_list[0])
+new_list[1] = int(new_list[1])
+
+t = tuple(new_list)
+print hash(t)
+
+########## BELOW IS WHAT I ACTUALLY TURNED IN #######
+#if __name__ == '__main__':
+#    n = int(raw_input())
+#    integer_list = map(int, raw_input().split())
+#    t = tuple(integer_list)
+#    print hash(t)
