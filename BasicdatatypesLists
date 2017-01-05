@@ -1,0 +1,41 @@
+n = input()
+out = []
+
+for _ in range(n):
+	raw = raw_input().split()
+	want = raw[0]
+	vars = raw[1:]
+	if want == 'print':
+		print out
+	else:
+		want = want + '(' + ','.join(vars) + ')'
+		eval('out.' + want)
+#		print out
+#		print eval(want + '(' + str(out) + ')')
+#		print eval(str(out).want + '()')
+#		print eval('%s()' % out.want)
+
+
+
+#s = ['insert', 0, 5]
+#cmd = s[0]
+#args = s[1:]
+#print args
+#if cmd !="print":
+#    print ",".join(args)
+
+
+
+
+#n = input()
+#instr = raw_input()
+#instr = instr.split()
+#out = []
+#cmd = instr[0]
+#
+#if cmd == "insert":
+#	insert(out, instr[1], instr[2])
+#elif cmd == ("remove" or "append"):
+#	eval(out.cmd)
+#else:
+#	eval(cmd)	
