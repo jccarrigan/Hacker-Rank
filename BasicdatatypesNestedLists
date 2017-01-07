@@ -1,0 +1,10 @@
+grades = []
+for _ in range(int(input())):
+	grades.append([raw_input(), float(input())])
+
+#print set([marks for name, marks in grades])
+
+second_highest = sorted(list(set([marks for name, marks in grades])))[1]
+print('\n'.join([a for a,b in sorted(grades) if b == second_highest]))
+
+#print [a for a,b in sorted(grades) if b == second_highest
