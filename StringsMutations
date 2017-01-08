@@ -1,0 +1,4 @@
+s = raw_input()
+change = raw_input().split()
+i, letter = int(change[0]), change[1]
+print s[:i] + letter + s[(i+1):]
