@@ -1,0 +1,4 @@
+s = raw_input()
+thing = s.split()
+thing = "-".join(thing)
+print thing
