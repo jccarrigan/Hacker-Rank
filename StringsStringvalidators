@@ -1,0 +1,27 @@
+if __name__ == '__main__':
+    s = raw_input()
+    s_list = [s[x] for x in range(len(s))]
+#   for i in range(len(s)):
+#       s_list.append(s[i])
+    alnum = False
+    alpha = False
+    num = False
+    lower = False
+    upper = False
+    for i in s_list:
+        if i.isalnum():
+            alnum = True
+        if i.isalpha():
+            alpha = True
+        if i.isdigit():
+            num = True
+        if i.islower():
+            lower = True
+        if i.isupper():
+            upper = True
+
+print alnum
+print alpha
+print num
+print lower
+print upper
