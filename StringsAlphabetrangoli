@@ -1,0 +1,38 @@
+import string
+alpha = string.lowercase
+
+def print_rangoli(num):
+	print alpha[num - 1].center(4*num - 3, '-')
+	for line in range(2, 2*num - 1):
+		if line < num:
+			neg = '-'.join(list(alpha[num - 1:(num - line):-1]))
+			pos = '-'.join(list(alpha[num - line:num]))
+			print (neg + '-' + pos).center(4*num - 3, '-')
+		elif line < 2 * num:
+			new_line = line - 2*(line - num)
+			neg = '-'.join(list(alpha[num - 1:(num - new_line):-1]))
+			pos = '-'.join(list(alpha[num - new_line:num]))
+			print (neg + '-' + pos).center(4*num - 3, '-')
+	if num > 1:
+		print alpha[num - 1].center(4*num - 3, '-')
+			
+#import string
+#alpha = string.lowercase
+#
+#def print_rangoli(size):
+#    print alpha[size - 1].center(((size - 1) * 4) + 1, '-')
+#    for line in range(2, size + 1):
+#        pos = [alpha[i] for i in range((size + 1) - line, size)]
+#        neg = [alpha[j] for j in range(size - 1, size - line - 1, -1)]
+#        out = '-'.join(neg) + '-' + '-'.join(pos)
+#        print out.center(((size - 1) * 4) + 1, '-')
+#    for line in range(size - 1, 1, -1):
+#        pos = [alpha[i] for i in range((size + 1) - line, size)]
+#        neg = [alpha[j] for j in range(size - 1, size - line - 1, -1)]
+#        out = '-'.join(neg) + '-' + '-'.join(pos)
+#        print out.center(((size - 1) * 4) + 1, '-')
+#    print alpha[size - 1].center(((size - 1) * 4) + 1, '-')
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    print_rangoli(n)
